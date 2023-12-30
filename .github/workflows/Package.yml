@@ -33,12 +33,3 @@ jobs:
           name: Bootstrap.tipa
           path: ./packages/Bootstrap.tipa
 
-      - name: Upload to Release
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./packages/Bootstrap.tipa
-          asset_name: Bootstrap.tipa
-          asset_content_type: application/tipa
